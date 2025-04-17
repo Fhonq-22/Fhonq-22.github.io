@@ -4,11 +4,6 @@
   padding: 16px;
 }
 
-#sothich {
-  background: var(--color-02);
-  color: var(--color-05);
-}
-
 #khac {
   background: var(--color-05);
   color: var(--color-02);

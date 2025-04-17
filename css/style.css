@@ -4,6 +4,7 @@
 @import url("lienhe.css");
 @import url("duan.css");
 @import url("sothich.css");
+@import url("popup.css");
 
 content {
   color: rgba(255, 255, 255, 0.9);
@@ -20,8 +21,6 @@ content>div {
 }
 
 content div>div {
-  /* height: 100px; */
-  /* padding: 20px 10%; */
   margin-top: 12px;
 }
 
@@ -40,7 +39,6 @@ content h2 {
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 4pt;
-  padding-left: 12px;
 }
 
 

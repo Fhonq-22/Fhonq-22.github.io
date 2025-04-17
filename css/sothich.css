@@ -1,61 +1,43 @@
-.st-icon {
-    margin-right: 8px;
-    color: var(--color-02);
-}
-
-.st-audio {
-    margin-top: 12px;
-    width: 100%;
-}
-
-.st-img-group {
+#sothich {
+    color: var(--color-05);
+    background: var(--color-02);
+    padding: 16px;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 12px;
+    align-items: stretch;
+    gap: 16px;
 }
 
-.st-img-full {
-    width: 100%;
+#sothich>h1 {
+    flex: 0 0 100%;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+#sothich>div {
+    flex: 1 1 calc(25% - 16px);
+    background: var(--color-02);
+    padding: 12px;
+    border: 2px solid var(--color-05);
     border-radius: 8px;
-    object-fit: cover;
-    max-height: 300px;
-}
-
-.st-img-half {
-    width: calc(50% - 6px);
-    border-radius: 8px;
-    object-fit: cover;
-    max-height: 300px;
-}
-
-
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-}
-
-.popup-content {
-    background: white;
-    border-radius: 12px;
-    padding: 24px;
-    width: 90%;
-    max-width: 500px;
-    position: relative;
-}
-
-.popup .close {
-    position: absolute;
-    top: 12px;
-    right: 16px;
-    font-size: 24px;
     cursor: pointer;
+    transition: all 0.3s;
+}
+
+#sothich>div:hover {
+    color: var(--color-02);
+    background: var(--color-05);
+}
+
+#sothich>div:hover i.st-icon{
+    color: var(--color-02);
+    transform: scale(1.2);
+}
+
+.st-icon {
+    display: block;
+    font-size: 32px;
+    margin-bottom: 4px;
+    color: var(--color-05);
 }
