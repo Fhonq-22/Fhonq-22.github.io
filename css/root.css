@@ -1,0 +1,24 @@
+:root{
+    --color-01: #B0F2BC;
+    --color-02: #89E8AC;
+    --color-03: #67DBA5;
+    --color-04: #4CC8A3;
+    --color-05: #38B2A3;
+    --color-06: #2C98A0;
+}
+
+#dark:root{
+    --color-01: #2C98A0;
+    --color-02: #38B2A3;
+    --color-03: #4CC8A3;
+    --color-04: #67DBA5;
+    --color-05: #89E8AC;
+    --color-06: #B0F2BC;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Catamaran', sans-serif;
+}

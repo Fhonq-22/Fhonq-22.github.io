@@ -1,220 +1,14 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Catamaran', sans-serif;
-}
-
-body {
-  
-}
-
-nav {
-  position: fixed;
-  height: 150px;
-  top: 30px;
-  left: 30px;
-  border-radius: 8px;
-  z-index: 20;
-  transition: .4s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-}
-
-nav .reference {
-  position: absolute;
-  top: 5px;
-  left: 0;
-  height: 50px;
-  width: 30px;
-  background: #fff;
-  opacity: .3;
-  pointer-events: none;
-  z-index: 50;
-  transition: opacity .4s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-  border-radius: 8px;
-}
-
-nav > ol {
-  position: fixed;
-  left: 52px;
-}
-
-nav > ol > li {
-  width: 0;
-  height: 30px;
-  padding: 0;
-  overflow: hidden;
-  transition: .4s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-  box-shadow: 8px 0 15px 0 rgba(0,0,0,0.2);
-  z-index: 50;
-  border-radius: 0 8px 8px 0;
-  cursor: pointer;
-}
-
-nav > ol > li a {
-  font-weight: 800;
-  text-decoration: none;
-  color: #fff;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 2pt;
-  margin-left: 20px;
-}
-
-nav > ol > li .sub-menu {
-  position: absolute;
-  z-index: -1;
-  list-style-type: none;
-  text-align: left;
-  height: 0;
-  overflow: hidden;
-  transition: .4s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-  transform: translateY(3px);
-  width: 192px;
-  margin-left: 8px;
-  box-shadow: 2px 5px 50px 0 rgba(0,0,0,0.5);
-  border-radius: 0 0 8px 8px;
-}
-
-nav > ol > li .sub-menu li a {
-  font-weight: 500;
-  margin-left: 13px;
-  transition: .4s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-
-  white-space: nowrap;
-  display: flex;
-  flex-direction: row;
-  padding: 4px 0px;
-}
-
-nav > ol > li .sub-menu li:hover a {
-  margin-left: 16px;
-  transition: .4s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-}
-
-nav > ol > li:before {
-  content: "";
-  position: fixed;
-  left: 30px;
-  width: 30px;
-  height: 30px;
-  visibility: visible;
-  cursor: pointer;
-  box-shadow: -7px 0 15px 0 rgba(0,0,0,0.2);
-  transition: .4s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-}
-
-nav > ol > li:nth-child(1) {
-  background: #537895;
-}
-
-nav > ol > li:nth-child(1):before {
-  background: #537895;
-  border-radius: 8px 8px 0 0;
-}
-
-nav > ol > li:nth-child(2) {
-  background: #b33939;
-}
-
-nav > ol > li:nth-child(2):before {
-  background: #b33939;
-}
-
-nav > ol > li:nth-child(3) {
-  background: #cd6133;
-  transition-delay: .4s;
-}
-
-nav > ol > li:nth-child(3):before {
-  background: #cd6133;
-}
-
-nav > ol > li:nth-child(3) ol li:nth-child(1) {
-  background: #c3592b;
-}
-
-nav > ol > li:nth-child(3) ol li:nth-child(2) {
-  background: #b85124;
-}
-
-nav > ol > li:nth-child(3) ol li:nth-child(3) {
-  background: #ae491c;
-}
-
-nav > ol > li:nth-child(4) {
-  background: #cc8e35;
-  transition-delay: .4s;
-}
-
-nav > ol > li:nth-child(4):before {
-  background: #cc8e35;
-}
-
-nav > ol > li:nth-child(4) ol li:nth-child(1) {
-  background: #c28630;
-}
-
-nav > ol > li:nth-child(4) ol li:nth-child(2) {
-  background: #b87e2b;
-}
-
-nav > ol > li:nth-child(4) ol li:nth-child(3) {
-  background: #ae7626;
-}
-
-nav > ol > li:nth-child(5) {
-  background: #218c74;
-}
-
-nav > ol > li:nth-child(5):before {
-  background: #218c74;
-  border-radius: 0 0 8px 8px;
-}
-
-nav > ol > li:hover {
-  width: 200px;
-  transition: .4s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-}
-
-nav > ol > li:hover:nth-child(1):before {
-  border-radius: 8px 0 0 0;
-}
-
-nav > ol > li:hover:nth-child(3) {
-  border-radius: 0 8px 0 0;
-}
-
-nav > ol > li:hover:nth-child(4) {
-  border-radius: 0 8px 0 0;
-}
-
-nav > ol > li:hover:nth-child(5):before {
-  border-radius: 0 0 0 8px;
-}
-
-nav > ol > li:hover .sub-menu {
-  height: 81px;
-  transition: .4s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-  transition-delay: .4s;
-}
-
-nav:hover {
-  width: 230px;
-  transition: .4s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-}
-
-nav:hover .reference {
-  opacity: 0;
-  transition: .4s cubic-bezier(0.770, 0.000, 0.175, 1.000);
-}
+@import url("root.css");
+@import url("gioithieu.css");
+@import url("thanh-xem-truoc.css");
 
 content {
   color: rgba(255,255,255,0.9);
   text-align: center;
 }
 
-content div {
-  height: 500px;
+content >div {
+  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -223,7 +17,7 @@ content div {
 }
 
 content div > div {
-  height: 100px;
+  /* height: 100px; */
   padding: 20px 10%;
 }
 
@@ -242,46 +36,16 @@ content h2 {
   letter-spacing: 4pt;
 }
 
-#home {
-  background: #537895;
+#duan,
+#bigwidgets, #biggerwidgets, #hugewidgets {
+  background: var(--color-03);
 }
 
-#about {
-  background: #b33939;
+#lienhe,
+#shishkabobs, #bbqkabobs, #summerkabobs {
+  background: var(--color-04);
 }
 
-#widgets {
-  background: #cd6133;
-}
-
-#bigwidgets {
-  background: #c3592b;
-}
-
-#biggerwidgets {
-  background: #b85124;
-}
-
-#hugewidgets {
-  background: #ae491c;
-}
-
-#kabobs {
-  background: #cc8e35;
-}
-
-#shishkabobs {
-  background: #c28630;
-}
-
-#bbqkabobs {
-  background: #b87e2b;
-}
-
-#summerkabobs {
-  background: #ae7626;
-}
-
-#contact {
-  background: #218c74;
+#khac {
+  background: var(--color-05);
 }

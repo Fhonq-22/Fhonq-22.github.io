@@ -2,16 +2,17 @@ function viewport() {
   var st = window.scrollY || document.documentElement.scrollTop;
   var wh = window.innerHeight;
   var nav = document.querySelector('nav');
-  var docHeight = document.documentElement.scrollHeight;
   var reference = document.querySelector('.reference');
-  
-  if (nav && reference) {
-    var dif = nav.offsetHeight / docHeight;
-    
+  var scrollableHeight = document.documentElement.scrollHeight - wh;
+
+  if (nav && reference && scrollableHeight > 0) {
+    var dif = nav.offsetHeight / scrollableHeight;
+
     reference.style.height = (wh * dif) + 'px';
     reference.style.top = (st * dif) + 'px';
   }
 }
+
 
 // Initial call
 viewport();
@@ -56,3 +57,36 @@ document.addEventListener('click', function(event) {
     }
   }
 });
+
+
+
+
+
+
+
+
+
+function updateMenuHeights() {
+  var nav = document.querySelector('nav');
+  var menuItems = nav.querySelectorAll('ol > li');
+  var totalScrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+  var navHeight = nav.offsetHeight;
+
+  menuItems.forEach(function(li) {
+    var link = li.querySelector('a[href^="#"]');
+    if (link) {
+      var sectionId = link.getAttribute('href');
+      var section = document.querySelector(sectionId);
+      if (section) {
+        var sectionHeight = section.offsetHeight;
+        var heightRatio = sectionHeight / totalScrollableHeight;
+        var barHeight = heightRatio * navHeight;
+
+        // Thêm vào CSS custom property để dùng trong ::before
+        li.style.setProperty('--bar-height', barHeight + 'px');
+      }
+    }
+  });
+}
+updateMenuHeights();
+window.addEventListener('resize', updateMenuHeights);
