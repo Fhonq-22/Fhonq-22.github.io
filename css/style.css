@@ -1,13 +1,13 @@
 @import url("root.css");
-@import url("gioithieu.css");
 @import url("thanh-xem-truoc.css");
+@import url("gioithieu.css");
 
 content {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   text-align: center;
 }
 
-content >div {
+content>div {
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -16,7 +16,7 @@ content >div {
   align-items: center;
 }
 
-content div > div {
+content div>div {
   /* height: 100px; */
   padding: 20px 10%;
 }
@@ -36,16 +36,35 @@ content h2 {
   letter-spacing: 4pt;
 }
 
-#duan,
-#bigwidgets, #biggerwidgets, #hugewidgets {
-  background: var(--color-03);
+
+
+
+/* Style khối chọn màu */
+.theme-picker {
+  position: fixed;
+  top: 0px;
+  background: none;
+  left: 50vw;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  margin: 20px;
 }
 
-#lienhe,
-#shishkabobs, #bbqkabobs, #summerkabobs {
-  background: var(--color-04);
+.theme-swatch {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid var(--color-06);
+  transition: transform 0.2s;
 }
-
-#khac {
-  background: var(--color-05);
+.theme-swatch:hover {
+  transform: scale(1.2);
 }
+/* Màu nền đại diện cho từng tone */
+.theme-swatch.green { background-color: #67DBA5; }
+.theme-swatch.pink { background-color: #FF8BA7; }
+.theme-swatch.orange { background-color: #FFB84D; }
+.theme-swatch.purple { background-color: #BF80FF; }
+.theme-swatch.blue { background-color: #70CFFF; }

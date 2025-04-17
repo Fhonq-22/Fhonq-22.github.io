@@ -1,7 +1,31 @@
 #gioithieu {
-    background: var(--color-01);
-  }
-  
-  #sothich {
-    background: var(--color-02);
-  }
+  background: var(--color-01);
+  color: var(--color-04);
+}
+
+#sothich {
+  background: var(--color-02);
+  color: var(--color-05);
+}
+
+
+#duan,
+#bigwidgets,
+#biggerwidgets,
+#hugewidgets {
+  background: var(--color-03);
+  color: var(--color-06);
+}
+
+#lienhe,
+#shishkabobs,
+#bbqkabobs,
+#summerkabobs {
+  background: var(--color-04);
+  color: var(--color-01);
+}
+
+#khac {
+  background: var(--color-05);
+  color: var(--color-02);
+}
