@@ -11,3 +11,8 @@ async function handleView() {
 }
 
 handleView();
+
+document.getElementById("go-to-sothich").addEventListener("click", () => {
+    document.getElementById("sothich").scrollIntoView({ behavior: "smooth" });
+  });
+  

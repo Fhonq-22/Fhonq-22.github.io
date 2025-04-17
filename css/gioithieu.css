@@ -1,6 +1,7 @@
 #gioithieu {
   background: var(--color-01);
   color: var(--color-04);
+  padding: 16px;
 }
 
 #sothich {
@@ -14,9 +15,6 @@
 }
 
 
-#gioithieu {
-  padding: 16px;
-}
 #gioithieu p {
   margin: 6px 0;
 }
@@ -63,10 +61,17 @@
   text-align: center;
   margin-top: 20px;
   animation: fadeIn 2s ease-in-out;
+  cursor: pointer;
+  transition: opacity 0.3s;
 }
+
+.scroll-hint:hover {
+  opacity: 0.8;
+}
+
 .scroll-hint i {
   position: absolute;
-  top: 32px;
+  top: 40px;
   left: 50%;
   transform: translate(-50%, -50%) scale(3);
   font-size: 1rem;

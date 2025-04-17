@@ -67,16 +67,16 @@
       <h1>Giới thiệu</h1>
       <h2>Chào bạn, mình là <span id="ho-ten">Đang tải...</span>!</h2>
       <div class="info-card">
-        <p>🎂 <strong>Sinh nhật:</strong> <span id="ngay-sinh">Đang tải...</span></p>
-        <p>🏠 <strong>Đến từ:</strong> <span id="que-quan">Đang tải...</span></p>
-        <p>💼 <strong>Mình làm:</strong> <span id="cong-viec">Đang tải...</span></p>
+        <p><i class='bx bxs-cake'></i> <strong>Sinh ngày:</strong> <span id="ngay-sinh">Đang tải...</span></p>
+        <p><i class='bx bxs-home'></i> <strong>Đến từ:</strong> <span id="que-quan">Đang tải...</span></p>
+        <p><i class='bx bxs-briefcase'></i> <strong>Mình là một:</strong> <span id="cong-viec">Đang tải...</span></p>
       </div>
-    
+
       <div class="bio">
         <p id="bio">Đang tải...</p>
       </div>
       
-      <p class="scroll-hint">
+      <p class="scroll-hint" id="go-to-sothich">
         Cuộn xuống dưới để hiểu rõ hơn về mình
         <i class='bx bxs-chevron-down'></i>
       </p>      
@@ -116,10 +116,20 @@
     <div id="khac"><h1>Khác</h1></div>
   </content>
 
+  <div id="popup-sothich" class="popup" style="display: none">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <h2 id="popup-ten"></h2>
+      <p id="popup-mota"></p>
+      <div id="popup-media"></div>
+    </div>
+  </div>
+  
   <script type="text/javascript" src="js/script.js"></script>
   <script type="module" src="js/LuotXem.js"></script>
   <script type="module" src="js/GioiThieu.js"></script>
   <script type="module" src="js/LienHe.js"></script>
   <script type="module" src="js/DuAn.js"></script>
+  <script type="module" src="js/SoThich.js"></script>
 </body>
 </html>

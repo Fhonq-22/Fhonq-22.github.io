@@ -2,8 +2,9 @@ import { LuotXemController } from './CONTROLLER.js';
 const luotXemController = new LuotXemController();
 
 async function handleView() {
-    const homnay = new Date().toISOString().split('T')[0];
+    const homnay = new Date().toLocaleDateString('en-CA');
     const luotXemCuoi = localStorage.getItem("luotXemCuoi");
+    console.log(homnay);
 
     if (luotXemCuoi !== homnay) {
         await luotXemController.themLuotXem(homnay, 1);
