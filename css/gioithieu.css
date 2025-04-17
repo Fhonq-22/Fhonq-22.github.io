@@ -17,13 +17,6 @@
   color: var(--color-06);
 }
 
-#lienhe,
-#shishkabobs,
-#bbqkabobs,
-#summerkabobs {
-  background: var(--color-04);
-  color: var(--color-01);
-}
 
 #khac {
   background: var(--color-05);
@@ -81,7 +74,7 @@
   margin-top: 20px;
   animation: fadeIn 2s ease-in-out;
 }
-.scroll-hint .material-icons {
+.scroll-hint i {
   position: absolute;
   top: 32px;
   left: 50%;

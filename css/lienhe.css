@@ -1,0 +1,61 @@
+#lienhe {
+    background: var(--color-04);
+    color: var(--color-01);
+    padding: 0 10%;
+}
+
+#lienhe div[id^="lh-"] {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    width: 90%;
+    padding: 20px 12px 12px;
+    margin-bottom: 12px;
+    border: 2px solid var(--color-01);
+    border-radius: 20px;
+}
+
+#lienhe h2 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    background: var(--color-01);
+    color: var(--color-04);
+    padding: 4px 8px;
+    border-radius: 20px;
+}
+
+#lienhe div[id^="lh-"] a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    margin: 6px 0;
+    border-radius: 10px;
+    background-color: var(--color-01);
+    color: var(--color-04);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+#lienhe div[id^="lh-"] a i {
+    font-size: 1.3rem;
+    color: var(--color-04);
+    transition: transform 0.3s;
+}
+
+#lienhe div[id^="lh-"] a:hover {
+    background-color: var(--color-03);
+    color: var(--color-06);
+}
+
+#lienhe div[id^="lh-"] a:hover i {
+    color: var(--color-06);
+    transform: scale(1.5);
+}

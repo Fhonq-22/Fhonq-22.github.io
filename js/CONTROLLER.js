@@ -1,5 +1,5 @@
 import { addData, getData, updateData, deleteData } from "./firebase-CRUD.js";
-import { LuotXem, GioiThieu } from "./MODEL.js";
+import { LuotXem, GioiThieu, LienHe } from "./MODEL.js";
 
 export class LuotXemController {
     constructor() {
@@ -40,5 +40,29 @@ export class GioiThieuController {
 
         const { HoTen, NgaySinh, QueQuan, CongViec, Bio } = data;
         return new GioiThieu(HoTen, NgaySinh, QueQuan, CongViec, Bio);
+    }
+}
+
+export class LienHeController {
+    constructor() {
+        this.collection = 'LienHe';
+    }
+
+    async getTatCaLienHe() {
+        const data = await getData(this.collection, '');
+        if (!data) return [];
+
+        const result = [];
+
+        for (const nhom in data) {
+            const items = data[nhom];
+
+            for (const key in items) {
+                const { Ten, Link, Icon } = items[key];
+                result.push(new LienHe(nhom, Ten, Link, Icon));
+            }
+        }
+
+        return result;
     }
 }

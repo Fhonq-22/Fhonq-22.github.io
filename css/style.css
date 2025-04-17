@@ -1,6 +1,7 @@
 @import url("root.css");
 @import url("thanh-xem-truoc.css");
 @import url("gioithieu.css");
+@import url("lienhe.css");
 
 content {
   color: rgba(255, 255, 255, 0.9);
@@ -23,11 +24,13 @@ content div>div {
 }
 
 content h1 {
-  font-size: 1.2em;
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 4pt;
   margin: 64px 0;
+  text-align: center;
+  font-size: 2rem;
+  display: inline-block;
 }
 
 content h2 {
@@ -35,6 +38,7 @@ content h2 {
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 4pt;
+  padding-left: 12px;
 }
 
 
@@ -61,12 +65,28 @@ content h2 {
   border: 1px solid var(--color-06);
   transition: transform 0.2s;
 }
+
 .theme-swatch:hover {
   transform: scale(1.2);
 }
+
 /* Màu nền đại diện cho từng tone */
-.theme-swatch.green { background-color: #67DBA5; }
-.theme-swatch.pink { background-color: #FF8BA7; }
-.theme-swatch.orange { background-color: #FFB84D; }
-.theme-swatch.purple { background-color: #BF80FF; }
-.theme-swatch.blue { background-color: #70CFFF; }
+.theme-swatch.green {
+  background-color: #67DBA5;
+}
+
+.theme-swatch.pink {
+  background-color: #FF8BA7;
+}
+
+.theme-swatch.orange {
+  background-color: #FFB84D;
+}
+
+.theme-swatch.purple {
+  background-color: #BF80FF;
+}
+
+.theme-swatch.blue {
+  background-color: #70CFFF;
+}
