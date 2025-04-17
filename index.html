@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About me</title>
   <link href="https://fonts.googleapis.com/css2?family=Playwrite+MX+Guides&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-
-
 </head>
 <body>
   <div class="theme-picker">
@@ -66,6 +65,21 @@
   <content>
     <div id="gioithieu">
       <h1>Giới thiệu</h1>
+      <h2>Chào bạn, mình là <span id="ho-ten">Đang tải...</span>!</h2>
+      <div class="info-card">
+        <p>🎂 <strong>Sinh nhật:</strong> <span id="ngay-sinh">Đang tải...</span></p>
+        <p>🏠 <strong>Đến từ:</strong> <span id="que-quan">Đang tải...</span></p>
+        <p>💼 <strong>Mình làm:</strong> <span id="cong-viec">Đang tải...</span></p>
+      </div>
+    
+      <div class="bio">
+        <p id="bio">Đang tải...</p>
+      </div>
+      
+      <p class="scroll-hint">
+        Cuộn xuống dưới để hiểu rõ hơn về mình
+        <span class="material-icons">keyboard_arrow_down</span>
+      </p>      
     </div>
 
     <div id="sothich">
@@ -103,5 +117,7 @@
   </content>
 
   <script type="text/javascript" src="js/script.js"></script>
+  <script type="module" src="js/LuotXem.js"></script>
+  <script type="module" src="js/GioiThieu.js"></script>
 </body>
 </html>

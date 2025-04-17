@@ -18,7 +18,8 @@ content>div {
 
 content div>div {
   /* height: 100px; */
-  padding: 20px 10%;
+  /* padding: 20px 10%; */
+  margin-top: 20px;
 }
 
 content h1 {
@@ -26,7 +27,7 @@ content h1 {
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 4pt;
-  margin: 100px 0;
+  margin: 64px 0;
 }
 
 content h2 {
@@ -49,6 +50,7 @@ content h2 {
   display: flex;
   gap: 10px;
   margin: 20px;
+  z-index: 2;
 }
 
 .theme-swatch {

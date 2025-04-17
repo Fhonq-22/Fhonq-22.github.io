@@ -1,0 +1,44 @@
+import { addData, getData, updateData, deleteData } from "./firebase-CRUD.js";
+import { LuotXem, GioiThieu } from "./MODEL.js";
+
+export class LuotXemController {
+    constructor() {
+        this.collection = 'LuotXem';
+    }
+
+    async getTongLuotXem() {
+        const data = await getData(this.collection, 'Tong');
+        return data ? data : 0;
+    }
+
+    async getLuotXemTheoNgay(ngay) {
+        const data = await getData(this.collection, 'HangNgay');
+        return data && data[ngay] ? data[ngay] : 0;
+    }
+
+    async themLuotXem(ngay, luotXemMoi=1) {
+        const hangNgayData = await getData(this.collection, 'HangNgay') || {};
+        if (hangNgayData[ngay]) {
+            hangNgayData[ngay] += luotXemMoi;
+        } else {
+            hangNgayData[ngay] = luotXemMoi;
+        }
+        const tong = (await this.getTongLuotXem() || 0) + luotXemMoi;
+        const luotXem = new LuotXem(tong, hangNgayData);
+        await updateData(this.collection, '', luotXem.toJSON());
+    }
+}
+
+export class GioiThieuController {
+    constructor() {
+        this.collection = 'GioiThieu';
+    }
+
+    async getGioiThieu() {
+        const data = await getData(this.collection, '');
+        if (!data) return null;
+
+        const { HoTen, NgaySinh, QueQuan, CongViec, Bio } = data;
+        return new GioiThieu(HoTen, NgaySinh, QueQuan, CongViec, Bio);
+    }
+}

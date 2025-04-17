@@ -29,3 +29,73 @@
   background: var(--color-05);
   color: var(--color-02);
 }
+
+
+#gioithieu {
+  padding: 16px;
+}
+#gioithieu p {
+  margin: 6px 0;
+}
+
+#gioithieu h2 {
+  margin-bottom: 20px;
+}
+
+.info-card {
+  background: var(--color-04);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.info-card p {
+  margin: 10px 0;
+  color: var(--color-01);
+}
+
+.bio {
+  line-height: 1.6;
+}
+#bio::before {
+  content: "“";
+  font-size: 2rem;
+  margin-right: 2px;
+}
+#bio::after {
+  content: "”";
+  font-size: 2rem;
+  margin-left: 2px;
+}
+
+
+.info-card p:hover {
+  transform: translateX(5px);
+  transition: 0.3s;
+}
+
+.scroll-hint {
+  position: relative;
+  font-size: 1.2rem;
+  color: var(--color-05);
+  text-align: center;
+  margin-top: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+.scroll-hint .material-icons {
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(3);
+  font-size: 1rem;
+  color: var(--color-05);
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes bounce {
+  0%, 100% { transform: translate(-50%, -50%) scale(3); }
+  50% { transform: translate(-50%, calc(-50% + 8px)) scale(3); opacity: 0.6; }
+}
