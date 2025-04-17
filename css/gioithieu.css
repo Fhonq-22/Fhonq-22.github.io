@@ -18,6 +18,20 @@
   margin-bottom: 20px;
 }
 
+h2#typing-text {
+  display: inline-block;
+  border-right: 2px solid var(--color-04);
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blinkCursor 0.75s steps(1) infinite;
+}
+
+@keyframes blinkCursor {
+  0%   { border-color: transparent; }
+  50%  { border-color: var(--color-04); }
+  100% { border-color: transparent; }
+}
+
 .info-card {
   background: var(--color-04);
   padding: 15px;
@@ -29,24 +43,27 @@
   color: var(--color-01);
 }
 
-.bio {
-  line-height: 1.6;
-}
-#bio::before {
-  content: "“";
-  font-size: 2rem;
-  margin-right: 2px;
-}
-#bio::after {
-  content: "”";
-  font-size: 2rem;
-  margin-left: 2px;
-}
-
-
 .info-card p:hover {
   transform: translateX(5px);
   transition: 0.3s;
+}
+
+.bio {
+  line-height: 1.6;
+}
+
+#bio::before {
+  font-family: 'boxicons';
+  content: '\ee81';
+  font-size: 1.5rem;
+  margin-right: 4px;
+}
+
+#bio::after {
+  font-family: 'boxicons';
+  content: '\ee82';
+  font-size: 1.5rem;
+  margin-left: 4px;
 }
 
 .scroll-hint {
