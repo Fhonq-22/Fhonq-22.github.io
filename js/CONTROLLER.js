@@ -1,5 +1,5 @@
 import { addData, getData, updateData, deleteData } from "./firebase-CRUD.js";
-import { LuotXem, GioiThieu, LienHe } from "./MODEL.js";
+import { LuotXem, GioiThieu, LienHe, DuAn } from "./MODEL.js";
 
 export class LuotXemController {
     constructor() {
@@ -37,7 +37,6 @@ export class GioiThieuController {
     async getGioiThieu() {
         const data = await getData(this.collection, '');
         if (!data) return null;
-
         const { HoTen, NgaySinh, QueQuan, CongViec, Bio } = data;
         return new GioiThieu(HoTen, NgaySinh, QueQuan, CongViec, Bio);
     }
@@ -51,9 +50,7 @@ export class LienHeController {
     async getTatCaLienHe() {
         const data = await getData(this.collection, '');
         if (!data) return [];
-
         const result = [];
-
         for (const nhom in data) {
             const items = data[nhom];
 
@@ -62,7 +59,24 @@ export class LienHeController {
                 result.push(new LienHe(nhom, Ten, Link, Icon));
             }
         }
-
         return result;
     }
+}
+
+export class DuAnController {
+  constructor() {
+    this.collection = 'DuAn'; // Tên node chính trong Firebase
+  }
+
+  async getTatCaDuAn() {
+    const data = await getData(this.collection, '');
+    if (!data) return [];
+    const result = [];
+    for (const maDA in data) {
+      const item = data[maDA];
+      const { Ten, MoTa, Link, AnhCover, TrangThai } = item;
+      result.push(new DuAn(maDA, Ten, MoTa, Link, AnhCover, TrangThai));
+    }
+    return result;
+  }
 }

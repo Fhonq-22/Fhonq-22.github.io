@@ -8,16 +8,6 @@
   color: var(--color-05);
 }
 
-
-#duan,
-#bigwidgets,
-#biggerwidgets,
-#hugewidgets {
-  background: var(--color-03);
-  color: var(--color-06);
-}
-
-
 #khac {
   background: var(--color-05);
   color: var(--color-02);

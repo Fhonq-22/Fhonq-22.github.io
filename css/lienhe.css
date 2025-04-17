@@ -1,7 +1,7 @@
 #lienhe {
     background: var(--color-04);
     color: var(--color-01);
-    padding: 0 10%;
+    padding: 0 16px;
 }
 
 #lienhe div[id^="lh-"] {
@@ -11,7 +11,7 @@
     justify-content: center;
     gap: 8px;
     position: relative;
-    width: 90%;
+    width: 100%;
     padding: 20px 12px 12px;
     margin-bottom: 12px;
     border: 2px solid var(--color-01);

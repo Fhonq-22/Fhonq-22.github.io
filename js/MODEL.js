@@ -38,3 +38,24 @@ export class LienHe {
         };
     }
 }
+
+export class DuAn {
+    constructor(MaDA, Ten, MoTa, Link, AnhCover, TrangThai) {
+      this.MaDA = MaDA;         // Mã dự án (VD: "DA001")
+      this.Ten = Ten;           // Tên dự án
+      this.MoTa = MoTa;         // Mô tả dự án
+      this.Link = Link;         // Link dẫn tới dự án
+      this.AnhCover = AnhCover; // Ảnh đại diện (URL)
+      this.TrangThai = TrangThai; // Trạng thái (VD: "Đã hoàn thành")
+    }
+  
+    toJSON() {
+      return {
+        Ten: this.Ten,
+        MoTa: this.MoTa,
+        Link: this.Link,
+        AnhCover: this.AnhCover,
+        TrangThai: this.TrangThai
+      };
+    }
+  }

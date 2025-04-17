@@ -2,6 +2,7 @@
 @import url("thanh-xem-truoc.css");
 @import url("gioithieu.css");
 @import url("lienhe.css");
+@import url("duan.css");
 
 content {
   color: rgba(255, 255, 255, 0.9);
@@ -20,7 +21,7 @@ content>div {
 content div>div {
   /* height: 100px; */
   /* padding: 20px 10%; */
-  margin-top: 20px;
+  margin-top: 12px;
 }
 
 content h1 {
