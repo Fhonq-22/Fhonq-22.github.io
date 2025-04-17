@@ -19,12 +19,23 @@
 }
 
 h2#typing-text {
-  display: inline-block;
-  border-right: 2px solid var(--color-04);
-  white-space: nowrap;
-  overflow: hidden;
-  animation: blinkCursor 0.75s steps(1) infinite;
+  display: inline;
+  white-space: normal;
+  overflow-wrap: break-word;
+  position: relative;
 }
+
+h2#typing-text::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: var(--color-04);
+  animation: blinkCursor 0.75s steps(1) infinite;
+  vertical-align: bottom;
+  margin-left: 2px;
+}
+
 
 @keyframes blinkCursor {
   0%   { border-color: transparent; }
