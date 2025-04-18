@@ -23,6 +23,7 @@ h2#typing-text {
   white-space: normal;
   overflow-wrap: break-word;
   position: relative;
+  height: 44px;
 }
 
 h2#typing-text::after {
