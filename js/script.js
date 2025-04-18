@@ -12,9 +12,6 @@ function viewport() {
     reference.style.top = (st * dif) + 'px';
   }
 }
-
-
-// Initial call
 viewport();
 
 // Resize event
@@ -99,15 +96,17 @@ function updateMenuHeights() {
   });
 
 }
+setTimeout(() => {
+  updateMenuHeights();
+}, 1200);
 
-updateMenuHeights();
 window.addEventListener('resize', updateMenuHeights);
 
 const swatches = document.querySelectorAll('.theme-swatch');
 swatches.forEach(swatch => {
-    swatch.addEventListener('click', () => {
-        const theme = swatch.dataset.theme;
-        document.documentElement.className = ''; 
-        document.documentElement.classList.add(theme);
-    });
+  swatch.addEventListener('click', () => {
+    const theme = swatch.dataset.theme;
+    document.documentElement.className = '';
+    document.documentElement.classList.add(theme);
+  });
 });

@@ -1,5 +1,5 @@
 import { addData, getData, updateData, deleteData } from "./firebase-CRUD.js";
-import { LuotXem, GioiThieu, LienHe, DuAn, SoThich } from "./MODEL.js";
+import { LuotXem, GioiThieu, LienHe, DuAn, SoThich, CotMoc } from "./MODEL.js";
 
 export class LuotXemController {
     constructor() {
@@ -96,5 +96,43 @@ export class SoThichController {
       result.push(new SoThich(maST, Ten, Icon, MaDiv, MoTa, PhuongTien));
     }
     return result;
+  }
+}
+
+export class CotMocController {
+  constructor() {
+    this.collection = 'CotMoc';
+  }
+
+  async getTatCaCotMoc() {
+    const data = await getData(this.collection, '');
+    if (!data) return [];
+
+    const result = [];
+    for (const MaCM in data) {
+      const item = data[MaCM];
+      const { TieuDe, ThoiGian, MoTa } = item;
+      result.push(new CotMoc(MaCM, TieuDe, ThoiGian, MoTa));
+    }
+    return result;
+  }
+
+  async getCotMoc(MaCM) {
+    const data = await getData(this.collection, MaCM);
+    if (!data) return null;
+    const { TieuDe, ThoiGian, MoTa } = data;
+    return new CotMoc(MaCM, TieuDe, ThoiGian, MoTa);
+  }
+
+  async themCotMoc(cotMoc) {
+    return await addData(this.collection, cotMoc.MaCM, cotMoc.toJSON());
+  }
+
+  async capNhatCotMoc(cotMoc) {
+    return await updateData(this.collection, cotMoc.MaCM, cotMoc.toJSON());
+  }
+
+  async xoaCotMoc(MaCM) {
+    return await deleteData(this.collection, MaCM);
   }
 }

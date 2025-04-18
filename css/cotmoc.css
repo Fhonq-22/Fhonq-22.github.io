@@ -1,0 +1,87 @@
+#cotmoc {
+    background: var(--color-05);
+    color: var(--color-02);
+    padding: 16px;
+    display: block;
+    padding-left: 10%;
+}
+
+#cotmoc h1 {
+    margin: 32px auto;
+}
+
+#timeline {
+    position: relative;
+    border-left: 8px solid var(--color-02);
+    transition: all 0.4s ease-in;
+}
+
+.cot-moc-item {
+    position: absolute;
+    left: 0;
+    max-width: calc(100% - 16px);
+    margin-left: 16px;
+    max-height: 120px;
+    padding: 8px 16px;
+    margin-bottom: 12px;
+    background-color: var(--color-06);
+    border-radius: 8px;
+    border: 1px solid var(--color-03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+}
+
+.cot-moc-item .dot {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    background-color: var(--color-02);
+    border-radius: 50%;
+    transform: translateX(-135%);
+}
+
+.dot::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 12px solid var(--color-02);
+}
+
+.cot-moc-item p {
+    margin: 4px 0;
+    line-height: 1.5;
+    text-align: left;
+}
+
+p.thoi-gian {
+    position: absolute;
+    top: 12px;
+    left: 0px;
+    transform: translateX(-289%);
+    width: 20px;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.cot-moc-item p i {
+    color: var(--color-04);
+}
+
+.cot-moc-item:hover {
+    background-color: var(--color-05);
+    transform: translateY(-8px);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cot-moc-item.active {
+    opacity: 1;
+    transition: all 0.4s ease-in;
+}

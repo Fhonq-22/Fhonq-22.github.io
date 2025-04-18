@@ -62,15 +62,14 @@ export class DuAn {
 
 export class SoThich {
     constructor(MaST, Ten, Icon, MaDiv, MoTa, PhuongTien) {
-        this.MaST = MaST;            // Mã sở thích (ví dụ: ST01)
-        this.Ten = Ten;              // Tên sở thích (ví dụ: Nghe nhạc)
-        this.Icon = Icon;            // Icon (sử dụng boxicons)
-        this.MaDiv = MaDiv;          // ID div (ví dụ: st-nghenhac)
-        this.MoTa = MoTa;            // Mô tả sở thích
-        this.PhuongTien = PhuongTien; // Mảng phương tiện (ví dụ: ["nhac.mp3"])
+        this.MaST = MaST;
+        this.Ten = Ten;
+        this.Icon = Icon;
+        this.MaDiv = MaDiv;
+        this.MoTa = MoTa;
+        this.PhuongTien = PhuongTien;
     }
 
-    // Phương thức toJSON để chuyển đối tượng thành dạng JSON khi lưu trữ hoặc truyền tải
     toJSON() {
         return {
             Ten: this.Ten,
@@ -81,3 +80,20 @@ export class SoThich {
         };
     }
 }
+
+export class CotMoc {
+    constructor(MaCM, TieuDe, ThoiGian, MoTa) {
+      this.MaCM = MaCM;
+      this.TieuDe = TieuDe;
+      this.ThoiGian = ThoiGian;
+      this.MoTa = MoTa;
+    }
+  
+    toJSON() {
+      return {
+        TieuDe: this.TieuDe,
+        ThoiGian: this.ThoiGian,
+        MoTa: this.MoTa
+      };
+    }
+  }  

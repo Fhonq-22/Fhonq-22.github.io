@@ -4,12 +4,6 @@
   padding: 16px;
 }
 
-#khac {
-  background: var(--color-05);
-  color: var(--color-02);
-}
-
-
 #gioithieu p {
   margin: 6px 0;
 }
