@@ -66,10 +66,10 @@ function calculateTotalCotMocHeight() {
     totalHeight += 12; // margin-top của timeline
     totalHeight += 0; // margin-bottom của timeline
 
-    return totalHeight+16*2;
+    return totalHeight + 16 * 2;
 }
 cotmocDiv.style.height = `${calculateTotalCotMocHeight()}px`;
-cotmocDiv.style.minHeight= `${calculateTotalCotMocHeight()}px`;
+cotmocDiv.style.minHeight = `${calculateTotalCotMocHeight()}px`;
 
 // Hàm xử lý cả active và height
 function onScrollUpdate() {
@@ -87,7 +87,7 @@ function onScrollUpdate() {
             maxBottom = bottom;
         }
 
-        if (rect.top >= timelineRect.top && rect.bottom <= timelineRect.bottom) {
+        if ((rect.top + 22) >= timelineRect.top && (rect.bottom - 22) <= timelineRect.bottom) {
             item.classList.add("active");
         } else {
             item.classList.remove("active");
