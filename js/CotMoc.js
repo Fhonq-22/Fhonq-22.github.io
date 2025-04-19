@@ -33,7 +33,7 @@ danhSachCotMocDaSapXep.forEach((cotMoc, index) => {
     thoiGian.innerHTML = cotMoc.ThoiGian?.includes("-")
         ? (() => {
             const [year, month] = cotMoc.ThoiGian.split("-");
-            return `T${+month}<br>/<br>${year}`; // +month bỏ số 0
+            return `Th${+month}<br>/<br>${year}`; // +month bỏ số 0
         })()
         : "Hiện tại";
 
