@@ -22,6 +22,19 @@ nav .reference {
   border-radius: 8px;
 }
 
+
+.reference {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  background: #00cc99;
+  border-radius: 10px;
+  transition: top 0.2s ease, height 0.2s ease;
+  z-index: 10;
+}
+
+
 nav>ol {
   position: fixed;
   left: 52px;

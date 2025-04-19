@@ -12,13 +12,7 @@ function viewport() {
     reference.style.top = (st * dif) + 'px';
   }
 }
-viewport();
-
-// Resize event
-window.addEventListener('resize', viewport);
-
-// Scroll event
-window.addEventListener('scroll', viewport);
+['load', 'resize', 'scroll'].forEach(event => window.addEventListener(event, viewport));
 
 // Smooth scroll for anchor links
 document.addEventListener('click', function (event) {
@@ -55,14 +49,6 @@ document.addEventListener('click', function (event) {
   }
 });
 
-
-
-
-
-
-
-
-
 function updateMenuHeights() {
   var nav = document.querySelector('nav');
   // var menuItems = nav.querySelectorAll('ol > li');
@@ -98,7 +84,7 @@ function updateMenuHeights() {
 }
 setTimeout(() => {
   updateMenuHeights();
-}, 1200);
+}, 1500);
 
 window.addEventListener('resize', updateMenuHeights);
 
