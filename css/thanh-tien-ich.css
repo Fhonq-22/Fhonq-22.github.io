@@ -1,59 +1,91 @@
 .theme-picker {
-    position: fixed;
-    top: 24px;
-    right: 4%;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    gap: 10px;
-    z-index: 2;
-    min-width: 70%;
-  }
-  
-  .theme-swatch {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 1px solid var(--color-06);
-    transition: transform 0.4s ease, opacity 0.4s ease;
-  }
-  
-  .theme-swatch.hide {
-    transform: translateX(60px);
+  position: fixed;
+  top: 24px;
+  right: 4%;
+  display: flex;
+  justify-content: right;
+  gap: 10px;
+  z-index: 2;
+  min-width: 70%;
+}
+
+.swatch-container {
+  display: flex;
+  gap: 10px;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.theme-swatch {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid var(--color-06);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.theme-swatch.hide {
+  transform: translateX(60px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.theme-swatch:hover {
+  transform: scale(1.2);
+}
+
+.action-buttons button {
+  background-color: var(--color-06);
+  color: var(--color-01);
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--color-01);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.4s, background-color 0.6s, color 0.6s;
+}
+
+.action-buttons button:hover {
+  transform: scale(1.2);
+}
+
+.action-buttons i {
+  font-size: 20px;
+}
+
+.extra-button {
+  opacity: 0;
+  transform: translateY(-32px);
+  pointer-events: none;
+}
+
+.extra-button.show {
+  animation: popIn 0.4s ease-out forwards;
+}
+
+.extra-button:nth-child(2).show { animation-delay: 0.05s; }
+.extra-button:nth-child(3).show { animation-delay: 0.15s; }
+.extra-button:nth-child(4).show { animation-delay: 0.25s; }
+
+@keyframes popIn {
+  0% {
+    transform: translateY(-20px) scale(0.95);
     opacity: 0;
-    pointer-events: none;
   }
-  
-  .theme-swatch:hover {
-    transform: scale(1.2);
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
   }
-  
-  button.theme-toggle {
-    background-color: var(--color-06);
-    color: var(--color-01);
-    width: 32px;
-    height: 32px;
-    border: 1px solid var(--color-01);
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-    transition: transform 0.4s, background-color 0.6s, color 0.6s;
-  }
-  
-  .theme-toggle:hover {
-    transform: scale(1.2);
-  }
-  
-  .theme-toggle i {
-    font-size: 24px;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  /* Các màu đại diện */
-  .theme-swatch.green  { background-color: #67DBA5; }
-  .theme-swatch.pink   { background-color: #FF8BA7; }
-  .theme-swatch.orange { background-color: #FFB84D; }
-  .theme-swatch.purple { background-color: #BF80FF; }
-  .theme-swatch.blue   { background-color: #70CFFF; }
+}
+
+.theme-swatch.green  { background-color: #67DBA5; }
+.theme-swatch.pink   { background-color: #FF8BA7; }
+.theme-swatch.orange { background-color: #FFB84D; }
+.theme-swatch.purple { background-color: #BF80FF; }
+.theme-swatch.blue   { background-color: #70CFFF; }
