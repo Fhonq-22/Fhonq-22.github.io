@@ -45,17 +45,16 @@ content h2 {
 
 
 
-/* Style khối chọn màu */
 .theme-picker {
   position: fixed;
-  top: 0px;
-  background: none;
-  left: 50vw;
-  transform: translateX(-50%);
+  top: 20px;
+  right: 8%;
   display: flex;
+  align-items: center;
+  justify-content: right;
   gap: 10px;
-  margin: 20px;
   z-index: 2;
+  min-width: 70%;
 }
 
 .theme-swatch {
@@ -64,30 +63,45 @@ content h2 {
   border-radius: 50%;
   cursor: pointer;
   border: 1px solid var(--color-06);
-  transition: transform 0.2s;
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
+
+.theme-swatch.hide {
+  transform: translateX(60px);
+  opacity: 0;
+  pointer-events: none;
+}
+
 
 .theme-swatch:hover {
   transform: scale(1.2);
 }
 
-/* Màu nền đại diện cho từng tone */
-.theme-swatch.green {
-  background-color: #67DBA5;
+button.theme-toggle {
+  background: var(--color-06);
+  color: var(--color-01);
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--color-01);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.2s;
 }
 
-.theme-swatch.pink {
-  background-color: #FF8BA7;
+.theme-toggle:hover {
+  transform: scale(1.2);
 }
 
-.theme-swatch.orange {
-  background-color: #FFB84D;
+.theme-toggle i {
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out;
 }
 
-.theme-swatch.purple {
-  background-color: #BF80FF;
-}
-
-.theme-swatch.blue {
-  background-color: #70CFFF;
-}
+/* Các màu đại diện */
+.theme-swatch.green  { background-color: #67DBA5; }
+.theme-swatch.pink   { background-color: #FF8BA7; }
+.theme-swatch.orange { background-color: #FFB84D; }
+.theme-swatch.purple { background-color: #BF80FF; }
+.theme-swatch.blue   { background-color: #70CFFF; }
