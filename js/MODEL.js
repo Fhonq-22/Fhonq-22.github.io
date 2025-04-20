@@ -83,17 +83,38 @@ export class SoThich {
 
 export class CotMoc {
     constructor(MaCM, TieuDe, ThoiGian, MoTa) {
-      this.MaCM = MaCM;
-      this.TieuDe = TieuDe;
-      this.ThoiGian = ThoiGian;
-      this.MoTa = MoTa;
+        this.MaCM = MaCM;
+        this.TieuDe = TieuDe;
+        this.ThoiGian = ThoiGian;
+        this.MoTa = MoTa;
     }
-  
+
     toJSON() {
-      return {
-        TieuDe: this.TieuDe,
-        ThoiGian: this.ThoiGian,
-        MoTa: this.MoTa
-      };
+        return {
+            TieuDe: this.TieuDe,
+            ThoiGian: this.ThoiGian,
+            MoTa: this.MoTa
+        };
     }
-  }  
+}
+
+export class PhienBan {
+    constructor(MaPB, MoTa, NgayTao, TacGia, TrangThai, Link) {
+        this.MaPB = MaPB;
+        this.MoTa = MoTa;
+        this.NgayTao = NgayTao;
+        this.TacGia = TacGia;
+        this.TrangThai = TrangThai;
+        this.Link = Link;
+    }
+
+    toJSON() {
+        return {
+            MoTa: this.MoTa,
+            NgayTao: this.NgayTao,
+            TacGia: this.TacGia,
+            TrangThai: this.TrangThai,
+            Link: this.Link
+        };
+    }
+}

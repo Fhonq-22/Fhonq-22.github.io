@@ -154,3 +154,37 @@
   margin: 8px 0;
   text-align: left;
 }
+
+
+
+
+ul#phien-ban-khac {
+  display: flex;
+  gap: 4px;
+  list-style-type: none;
+  padding: 0;
+  margin: 8px 0;
+}
+
+#phien-ban-khac li {
+  padding: 8px;
+  border: 1px solid var(--color-06);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+#phien-ban-khac li a {
+  padding: 8px;
+  text-decoration: none;
+  color: var(--color-06);
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#phien-ban-khac li:hover,
+#phien-ban-khac li:hover a {
+  background-color: var(--color-06);
+  color: var(--color-01);
+  transition: background-color 0.3s ease, color 0.4s ease-in;
+}
