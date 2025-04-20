@@ -34,3 +34,24 @@ toggleBtn.addEventListener('click', () => {
     }
   });
 });
+
+const viewToggleButtons = document.querySelectorAll('.extra-button');
+const viewDetailsElements = document.querySelectorAll('.view-details');
+
+viewToggleButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const targetId = button.getAttribute('data-target');
+    const targetViewDetails = document.getElementById(targetId);
+
+    viewDetailsElements.forEach(detail => {
+      if (detail !== targetViewDetails) {
+        detail.classList.remove('active');
+      }
+    });
+
+    if (targetViewDetails) {
+      targetViewDetails.classList.toggle('active');
+    }
+  });
+});
+

@@ -40,6 +40,12 @@
   transform: scale(1.2);
 }
 
+.theme-swatch.green  { background-color: #67DBA5; }
+.theme-swatch.pink   { background-color: #FF8BA7; }
+.theme-swatch.orange { background-color: #FFB84D; }
+.theme-swatch.purple { background-color: #BF80FF; }
+.theme-swatch.blue   { background-color: #70CFFF; }
+
 .action-buttons button {
   background-color: var(--color-06);
   color: var(--color-01);
@@ -67,6 +73,11 @@
 
 .extra-button.show {
   animation: popIn 0.4s ease-out forwards;
+  pointer-events: auto;
+}
+
+.extra-button:hover {
+  transform: scale(1.2);
 }
 
 .extra-button:nth-child(2).show { animation-delay: 0.05s; }
@@ -84,8 +95,56 @@
   }
 }
 
-.theme-swatch.green  { background-color: #67DBA5; }
-.theme-swatch.pink   { background-color: #FF8BA7; }
-.theme-swatch.orange { background-color: #FFB84D; }
-.theme-swatch.purple { background-color: #BF80FF; }
-.theme-swatch.blue   { background-color: #70CFFF; }
+.view-details {
+  min-width: 720%;
+  max-width: calc(100% - 4% - 4% - 30px - 32px);
+  position: absolute;
+  top: 0;
+  right: calc(32px + 10px);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.view-details.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.view-details .triangle {
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid var(--color-06);
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease 0.3s;
+}
+
+.view-details.active .triangle {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.view-details .details-content {
+  width: 100%;
+  background-color: var(--color-01);
+  color: var(--color-06);
+  padding: 15px;
+  border: 1px solid var(--color-06);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.45s ease 0.15s, transform 0.6s ease;
+}
+
+.view-details.active .details-content {
+  opacity: 1;
+  transform: translateX(0);
+}
