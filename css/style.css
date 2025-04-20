@@ -1,4 +1,5 @@
 @import url("root.css");
+@import url("thanh-tien-ich.css");
 @import url("thanh-xem-truoc.css");
 @import url("gioithieu.css");
 @import url("lienhe.css");
@@ -41,67 +42,3 @@ content h2 {
   font-weight: 500;
   letter-spacing: 4pt;
 }
-
-
-
-
-.theme-picker {
-  position: fixed;
-  top: 20px;
-  right: 8%;
-  display: flex;
-  align-items: center;
-  justify-content: right;
-  gap: 10px;
-  z-index: 2;
-  min-width: 70%;
-}
-
-.theme-swatch {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  cursor: pointer;
-  border: 1px solid var(--color-06);
-  transition: transform 0.4s ease, opacity 0.4s ease;
-}
-
-.theme-swatch.hide {
-  transform: translateX(60px);
-  opacity: 0;
-  pointer-events: none;
-}
-
-
-.theme-swatch:hover {
-  transform: scale(1.2);
-}
-
-button.theme-toggle {
-  background: var(--color-06);
-  color: var(--color-01);
-  width: 32px;
-  height: 32px;
-  border: 1px solid var(--color-01);
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.theme-toggle:hover {
-  transform: scale(1.2);
-}
-
-.theme-toggle i {
-  font-size: 24px;
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Các màu đại diện */
-.theme-swatch.green  { background-color: #67DBA5; }
-.theme-swatch.pink   { background-color: #FF8BA7; }
-.theme-swatch.orange { background-color: #FFB84D; }
-.theme-swatch.purple { background-color: #BF80FF; }
-.theme-swatch.blue   { background-color: #70CFFF; }
